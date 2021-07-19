@@ -1,0 +1,160 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lato', sans-serif;
+}
+header, footer{
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: 700;
+}
+.container{
+    display: grid;
+	min-height: 100vh;
+	grid-template-columns: 100px 1fr 100px;
+	grid-template-rows: 100px 1fr 50px;
+    background: url(assets/pool.jpg) no-repeat center center;
+    background-size: auto; 
+}
+
+@media (max-width: 550px){
+	.container{
+		grid-template-areas: 
+		'banner banner banner'
+		'main main nav'
+		'footer footer footer';
+	}
+}
+@media (min-width: 550px) and (max-width: 700px){
+	.container{
+		grid-template-areas: 
+		'nav banner banner'
+		'nav main main'
+		'nav footer footer';
+	}
+}
+@media (min-width: 700px){
+	.container{
+		grid-template-areas: 
+		'banner banner banner'
+		'nav main main'
+		'footer footer footer';
+	}
+}
+/* ---welcom--- */
+header{
+	grid-area: banner;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/* ---side navigation--- */
+
+.homeicon{
+
+    width: 50px;
+    height: 40px;
+}
+.square{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100px;
+    width: 90px;
+    background-color: rgb(14, 13, 17);
+} 
+button:hover{
+    border: none;
+    background-color: grey;
+}
+a{
+    text-decoration: none;  
+}
+img, a{
+    display: flex;
+    justify-content: center;
+}
+nav{
+    display: flex;
+    align-self: center;
+
+}
+nav a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight:bold;
+    color: white;
+}
+/* ---Jean-Marie Ghislain--- */
+main{
+	grid-area: main;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/* .photocontainer{
+    opacity: 0.5;
+} */
+h1{
+    margin-top: 25px;
+    text-align: center;
+    font-size: 60px;
+    font-size: clamp(34px, 12vw, 60px)
+}
+h2{
+    text-align: center;
+    font-size: 48px;
+    font-size: clamp(24px, 12vw, 38px);
+}
+.photocontainer{
+    position: relative;
+    right: 40px;
+    align-self: center;
+    text-align: center; 
+    padding: 12px;
+    margin: 0px;
+    background-color: rgba(245, 245, 245, 0.75);
+    border-radius: 2;
+}
+button{
+    border: 1px solid black; 
+    margin-top: 30px;
+    margin-bottom: 40px;
+    font-size: 30px;
+    text-align: center;
+    padding: 1%;
+    background-color: rgb(14, 13, 17);
+    color: white;
+}
+
+footer{
+	grid-area: footer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* ---login--- */
+.login{
+    background-color: white;
+}
+
+label{
+    padding: 20px;
+    font-size: 48px;
+    text-align: center;
+    display: block;
+    font: 'Lato', sans-serif;
+}
+input{
+
+    margin-right: 10px;
+    margin-left: 70px;
+    /* padding-right: 50px; */
+    min-height: 40px;
+    justify-content: center;
+}
